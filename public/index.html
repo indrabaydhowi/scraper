@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Sinta AI Scraper | Arsitektur Hybrid Premium</title>
+    <meta name="description" content="Scraper Hybrid AI canggih untuk Jurnal Sinta dengan dukungan Local LLM dan ekstraksi kontak langsung.">
+    <!-- Plus Jakarta Sans for premium, tech-forward typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-glow bg-glow-primary"></div>
+    <div class="bg-glow bg-glow-secondary"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content container">
+            <div class="brand">
+                <div class="brand-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <span class="brand-text">Sinta<span class="text-gradient">Scraper</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav_features">Fitur</a>
+                <a href="#dashboard" data-i18n="nav_dashboard">Dasbor</a>
+            </div>
+            <div class="nav-actions">
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button id="lang-id" class="lang-btn active">ID</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+                
+                <button id="export-excel" class="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span data-i18n="export_excel">Ekspor .xlsx</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> <span data-i18n="hero_badge">Arsitektur Hybrid AI v2.0</span>
+            </div>
+            <h1 class="hero-title">
+                <span data-i18n="hero_title_1">Pencarian Jurnal Cerdas dengan</span> <br/>
+                <span class="text-gradient-alt" data-i18n="hero_title_2">Kecerdasan Local LLM</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                Ekstrak data jurnal Sinta & Scopus, biaya APC, waiver, dan kontak langsung dengan sangat cepat. Didukung 99% ekstraksi Regex presisi dan 1% AI cerdas.
+            </p>
+            <div class="hero-cta">
+                <a href="#dashboard" class="btn btn-glow" data-i18n="cta_explore">Mulai Jelajahi</a>
+                <a href="#features" class="btn btn-ghost" data-i18n="cta_learn">Pelajari Cara Kerjanya</a>
+            </div>
+        </div>
+        
+        <!-- Hero Decorative Graphic -->
+        <div class="hero-graphic">
+            <div class="glass-panel stat-card float-1">
+                <div class="stat-icon sinta">S1</div>
+                <div class="stat-info">
+                    <span class="stat-label" data-i18n="stat_indexed">Jurnal Terindeks</span>
+                    <span class="stat-value">5,432+</span>
+                </div>
+            </div>
+            <div class="glass-panel stat-card float-2">
+                <div class="stat-icon free">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label" data-i18n="stat_cost">Bebas Biaya API</span>
+                    <span class="stat-value" data-i18n="stat_ai">AI Lokal Gratis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features container">
+        <div class="section-header">
+            <h2><span data-i18n="feature_heading_1">Dibuat untuk</span> <span class="text-gradient" data-i18n="feature_heading_2">Peneliti & Dosen</span></h2>
+            <p data-i18n="feature_subheading">Semua yang Anda butuhkan untuk menemukan wadah publikasi yang tepat.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card glass-panel">
+                <div class="feature-icon icon-cyan">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                </div>
+                <h3 data-i18n="feat_1_title">Scraping Hybrid</h3>
+                <p data-i18n="feat_1_desc">Memprioritaskan ekstraksi klasik yang secepat kilat (XPath/Regex). Hanya memanggil Local LLM ketika menemukan biaya berformat naratif kompleks atau kontak yang ambigu.</p>
+            </div>
+            <div class="feature-card glass-panel">
+                <div class="feature-icon icon-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3 data-i18n="feat_2_title">Privasi Penuh</h3>
+                <p data-i18n="feat_2_desc">Berjalan sepenuhnya pada infrastruktur Anda melalui Ollama (Llama 3.1). Tanpa biaya API, tanpa kebocoran data. 100% aman dan gratis selamanya.</p>
+            </div>
+            <div class="feature-card glass-panel">
+                <div class="feature-icon icon-emerald">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <h3 data-i18n="feat_3_title">Kontak Instan</h3>
+                <p data-i18n="feat_3_desc">Hindari pencarian manual. Secara otomatis mengekstrak email Editor, nomor WhatsApp, dan tautan Telegram langsung ke dasbor Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard container">
+        <div class="dashboard-layout">
+            <!-- Advanced Sidebar -->
+            <aside class="sidebar glass-panel">
+                <div class="sidebar-header">
+                    <h3 data-i18n="filter_explore">Eksplorasi Data</h3>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="search-notes" class="search-input" placeholder="Cari waiver, diskon..." data-i18n-placeholder="filter_search_placeholder">
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h4 class="filter-title" data-i18n="filter_apc">Biaya Publikasi (APC)</h4>
+                    <label class="custom-toggle">
+                        <span class="toggle-label" data-i18n="filter_free">Gratis / Waiver</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="filter-free">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                    <label class="custom-toggle">
+                        <span class="toggle-label" data-i18n="filter_paid">Berbayar (Termurah)</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="filter-paid">
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="filter-section">
+                    <h4 class="filter-title" data-i18n="filter_sinta">Akreditasi Sinta</h4>
+                    <div class="chip-group" id="sinta-filters">
+                        <label class="chip"><input type="checkbox" value="S1"><span>S1</span></label>
+                        <label class="chip"><input type="checkbox" value="S2"><span>S2</span></label>
+                        <label class="chip"><input type="checkbox" value="S3"><span>S3</span></label>
+                        <label class="chip"><input type="checkbox" value="S4"><span>S4</span></label>
+                        <label class="chip"><input type="checkbox" value="S5"><span>S5</span></label>
+                        <label class="chip"><input type="checkbox" value="S6"><span>S6</span></label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h4 class="filter-title" data-i18n="filter_scopus">Kuartil Scopus</h4>
+                    <div class="chip-group" id="scopus-filters">
+                        <label class="chip"><input type="checkbox" value="Q1"><span>Q1</span></label>
+                        <label class="chip"><input type="checkbox" value="Q2"><span>Q2</span></label>
+                        <label class="chip"><input type="checkbox" value="Q3"><span>Q3</span></label>
+                        <label class="chip"><input type="checkbox" value="Q4"><span>Q4</span></label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Results Data -->
+            <div class="results-area">
+                <div class="results-header">
+                    <h2 class="results-title" data-i18n="results_title">Repositori Langsung</h2>
+                    <div class="results-meta">
+                        <span class="status-indicator"></span>
+                        <span id="results-count" data-i18n="results_loading">Memuat data...</span>
+                    </div>
+                </div>
+                <div id="journals-grid" class="cards-grid">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <p data-i18n="footer_copyright">&copy; 2026 Sinta AI Scraper. Dibuat untuk Peneliti Indonesia.</p>
+        <p class="footer-disclaimer" data-i18n="footer_disclaimer">Disclaimer: Data diperoleh melalui metode crawling otomatis dan mungkin memiliki jeda waktu pembaruan. Silakan verifikasi langsung ke situs web jurnal untuk keputusan final.</p>
+    </footer>
+
+    <script src="../src/script.js"></script>
+</body>
+</html>
